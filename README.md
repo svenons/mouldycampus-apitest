@@ -141,7 +141,7 @@ This document describes the available endpoints for the API, including their usa
 
 ### Get Course Details
 
-**URL:** `/api/courses/{id}`  
+**URL:** `/api/course`  
 **Method:** `GET`  
 **Authorization:** None  
 **Description:** Retrieve details of a specific course, including ratings.
@@ -183,7 +183,7 @@ This document describes the available endpoints for the API, including their usa
 
 ### Get Professor Details
 
-**URL:** `/api/professors/{id}`  
+**URL:** `/api/professor`  
 **Method:** `GET`  
 **Authorization:** None  
 **Description:** Retrieve details of a specific professor, including average rating.
@@ -225,7 +225,7 @@ This document describes the available endpoints for the API, including their usa
 
 ### Create a Review
 
-**URL:** `/api/reviews`  
+**URL:** `/api/createAReview`  
 **Method:** `POST`  
 **Authorization:** Bearer Token  
 **Description:** Submit a review for a course.
@@ -246,7 +246,7 @@ This document describes the available endpoints for the API, including their usa
 
 ### Delete a Review
 
-**URL:** `/api/reviews/{id}`  
+**URL:** `/api/deleteAReview`  
 **Method:** `DELETE`  
 **Authorization:** Bearer Token  
 **Description:** Delete a specific review.

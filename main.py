@@ -27,6 +27,31 @@ def login(data):
     else:
         return req.status_code
     
+def register(data):
+    url = api_url + "register/"
+    req = requests.post(url, data=data)
+    if req.status_code == 200:
+        try:
+            return req.json()['token']
+        except json.JSONDecodeError:
+            return req.text
+    else:
+        return req.status_code
+    
+def logout(token):
+    url = api_url + "logout/"
+    headers = {
+        "Authorization": f"Bearer {token}"
+    }
+    req = requests.post(url, headers=headers)
+    if req.status_code == 200:
+        try:
+            return req.json()
+        except json.JSONDecodeError:
+            return req.text
+    else:
+        return req.status_code
+    
 def updateProfile(token, data):
     url = api_url + "updateUserProfile/"
     headers = {
